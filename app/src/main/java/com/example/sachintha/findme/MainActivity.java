@@ -16,8 +16,12 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button;
+    Button button,btnmap;
     EditText editText,editText2;
+    static String number;
+    static String numbercondition;
+    int numberint;
+    String sms="Hello";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +45,13 @@ public class MainActivity extends AppCompatActivity {
 
         button =(Button) findViewById(R.id.button);
         editText=(EditText) findViewById(R.id.editText);
-        editText2=(EditText) findViewById(R.id.editText2);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                String number = editText.getText().toString();
-//                String sms= editText2.getText().toString();
+                numbercondition="+94";
+                numberint= Integer.parseInt(editText.getText().toString());
+                numbercondition+=Integer.toString(numberint);
 //                try {
 //                    SmsManager smsManager = SmsManager.getDefault();
 //                    smsManager.sendTextMessage(number,null,sms,null,null);
@@ -61,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
 
     }
 

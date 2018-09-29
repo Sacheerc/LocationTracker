@@ -2,6 +2,7 @@ package com.example.sachintha.findme;
 
 import android.app.Activity;
 import android.content.ContentResolver;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,10 +10,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import static com.example.sachintha.findme.MainActivity.numbercondition;
 
 public class SmsActivity extends Activity implements OnItemClickListener {
 
@@ -20,6 +24,7 @@ public class SmsActivity extends Activity implements OnItemClickListener {
     ArrayList<String> smsMessagesList = new ArrayList<String>();
     ListView smsListView;
     ArrayAdapter arrayAdapter;
+    Button btnshowmap;
 
     public static SmsActivity instance() {
         return inst;
@@ -35,13 +40,26 @@ public class SmsActivity extends Activity implements OnItemClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sms);
+        btnshowmap =(Button) findViewById(R.id.btnshowmap);
+
         smsListView = (ListView) findViewById(R.id.SMSList);
         arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, smsMessagesList);
         smsListView.setAdapter(arrayAdapter);
         smsListView.setOnItemClickListener(this);
+        Toast.makeText(this, numbercondition,Toast.LENGTH_SHORT).show();
 
 //        refreshSmsInbox();
+
+        btnshowmap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SmsActivity.this,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
+
 
 //    public void refreshSmsInbox() {
 //        ContentResolver contentResolver = getContentResolver();
