@@ -50,15 +50,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 numbercondition="+94";
+                number=editText.getText().toString();
                 numberint= Integer.parseInt(editText.getText().toString());
                 numbercondition+=Integer.toString(numberint);
-//                try {
-//                    SmsManager smsManager = SmsManager.getDefault();
-//                    smsManager.sendTextMessage(number,null,sms,null,null);
-//                    Toast.makeText(MainActivity.this,"Sent..!",Toast.LENGTH_SHORT).show();
-//                }catch (Exception e){
-//                    Toast.makeText(MainActivity.this,"Failed..!",Toast.LENGTH_SHORT).show();
-//                }
+                try {
+                    SmsManager smsManager = SmsManager.getDefault();
+                    smsManager.sendTextMessage(number,null, sms,null,null);
+                    Toast.makeText(MainActivity.this,"Sent..!",Toast.LENGTH_SHORT).show();
+                }catch (Exception e){
+                    Toast.makeText(MainActivity.this,"Failed..!",Toast.LENGTH_SHORT).show();
+                }
                 Intent intent = new Intent(MainActivity.this,SmsActivity.class);
                 startActivity(intent);
 
