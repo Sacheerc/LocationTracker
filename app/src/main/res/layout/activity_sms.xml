@@ -11,9 +11,8 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
         android:layout_margin="20dp"
-        android:text="Please Wait Till Device Response"
+        android:text="Requsting Location From Bag Buddy"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <View
@@ -40,7 +39,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:background="#00C3FF"
-        android:text="  Show Location  " />
+        android:background="@drawable/show"/>
 
 </LinearLayout>

@@ -29,8 +29,7 @@ public class SmsBroadcastReceiver extends BroadcastReceiver {
                 String address = smsMessage.getOriginatingAddress();
                 numb=address;
 
-                smsMessageStr += "SMS From: " + address + "\n";
-                smsMessageStr += smsBody + "\n";
+                smsMessageStr += "Bag Buddy Sent Location!!!. Click to View\n";
             }
 
             //this will update the UI with message

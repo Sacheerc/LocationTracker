@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     static String number;
     static String numbercondition;
     int numberint;
-    String sms="Hello";
+    String sms="Where";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 }catch (Exception e){
                     Toast.makeText(MainActivity.this,"Failed..!",Toast.LENGTH_SHORT).show();
                 }
-                Intent intent = new Intent(MainActivity.this,SmsActivity.class);
+                Intent intent = new Intent(MainActivity.this,SplashActivity.class);
                 startActivity(intent);
 
 
