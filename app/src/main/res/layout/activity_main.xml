@@ -10,9 +10,9 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background"
-        app:srcCompat="@drawable/background" />
+        android:layout_height="match_parent"
+        android:background="@drawable/bag"
+         />
 
     <ImageView
         android:id="@+id/imageView"
@@ -26,19 +26,20 @@
     <EditText
         android:id="@+id/editText"
         style="@android:style/Widget.Holo.EditText"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_width="260dp"
+        android:layout_height="46dp"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="20dp"
-        android:background="@color/colorAccent"
+        android:background="@drawable/editText"
         android:ems="10"
         android:hint="Enter the Device Number"
         android:inputType="phone"
         android:padding="1dp"
         android:paddingLeft="5dp"
-        android:textColor="@color/colorPrimaryDark" />
+        android:textColor="@color/colorPrimaryDark"
+        android:textAlignment="center"/>
 
     <Button
         android:id="@+id/button"
@@ -50,9 +51,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
-        android:background="@android:drawable/dialog_holo_light_frame"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="Start Tracking"
+        android:background="@drawable/start"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="14sp"
@@ -65,12 +64,10 @@
         android:layout_below="@+id/button"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
-        android:background="@android:drawable/dialog_holo_light_frame"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="Check Balance"
+        android:background="@drawable/check"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold" />
@@ -85,9 +82,7 @@
         android:layout_marginTop="7dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
-        android:background="@android:drawable/dialog_holo_light_frame"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="Help"
+        android:background="@drawable/help"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold" />
