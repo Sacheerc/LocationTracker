@@ -32,14 +32,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/editText"
+        android:background="@drawable/textfield"
         android:ems="10"
         android:hint="Enter the Device Number"
         android:inputType="phone"
         android:padding="1dp"
         android:paddingLeft="5dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark" />
 
     <Button
         android:id="@+id/button"
