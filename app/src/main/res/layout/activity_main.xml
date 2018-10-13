@@ -31,7 +31,7 @@
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/textfield"
         android:ems="10"
         android:hint="Enter the Device Number"
@@ -42,51 +42,13 @@
         android:textColor="@color/colorPrimaryDark" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="223dp"
-        android:layout_height="59dp"
-        android:layout_below="@+id/editText"
+        android:id="@+id/btnlogin"
+        android:layout_width="221dp"
+        android:layout_height="69dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        android:background="@drawable/start"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="14sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="228dp"
-        android:layout_height="60dp"
-        android:layout_below="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        android:background="@drawable/check"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="230dp"
-        android:layout_height="56dp"
-        android:layout_below="@+id/button2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        android:background="@drawable/help"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold" />
-
+        android:layout_marginBottom="98dp"
+        android:background="@drawable/login" />
 
 
 </RelativeLayout>

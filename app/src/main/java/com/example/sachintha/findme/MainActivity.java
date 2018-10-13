@@ -14,14 +14,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
+
 public class MainActivity extends AppCompatActivity {
 
-    Button button,btnmap;
+    Button btnlogin,button,button1,btnmap;
     EditText editText,editText2;
-    static String number;
-    static String numbercondition;
+    public static String number;
+    public static String numbercondition;
     int numberint;
-    String sms="Where";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,30 +44,21 @@ public class MainActivity extends AppCompatActivity {
             //do nothing
         }
 
-        button =(Button) findViewById(R.id.button);
+        btnlogin =(Button) findViewById(R.id.btnlogin);
         editText=(EditText) findViewById(R.id.editText);
 
-        button.setOnClickListener(new View.OnClickListener() {
+
+        btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                numbercondition="+94";
                 number=editText.getText().toString();
+                numbercondition="+94";
                 numberint= Integer.parseInt(editText.getText().toString());
                 numbercondition+=Integer.toString(numberint);
-                try {
-                    SmsManager smsManager = SmsManager.getDefault();
-                    smsManager.sendTextMessage(number,null, sms,null,null);
-                    Toast.makeText(MainActivity.this,"Sent..!",Toast.LENGTH_SHORT).show();
-                }catch (Exception e){
-                    Toast.makeText(MainActivity.this,"Failed..!",Toast.LENGTH_SHORT).show();
-                }
-                Intent intent = new Intent(MainActivity.this,SplashActivity.class);
+                Intent intent = new Intent(MainActivity.this,home.class);
                 startActivity(intent);
-
-
             }
         });
-
 
     }
 
